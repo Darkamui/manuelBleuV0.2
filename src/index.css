@@ -1,13 +1,232 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.6;
+}
+a {
+	text-decoration: none;
+}
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+.app__container {
+	width: 100%;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: row;
+}
+.app__flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.app__wrapper {
+	flex: 1;
+	width: 100%;
+	flex-direction: column;
+	padding: 4rem 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app__navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	padding: 1rem;
+}
+.copyright {
+	width: 100%;
+	padding: 2rem 0 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.copyright > p {
+	text-transform: uppercase;
+	color: #000;
+}
+.p-text {
+	font-size: 0.9rem;
+	text-align: left;
+	line-height: 1.5;
+}
+.app__container {
+	width: 100%;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: row;
+}
+.app__whitebg {
+	background-color: grey;
+}
+.app__second-bg {
+	background-color: rgba(79, 75, 149, 0.6);
+}
+.app__navigation-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #cbcbcb;
+	margin: 0.5rem;
+
+	transition: background-color 0.2s ease-in-out;
+}
+.app__navigation-dot:hover {
+	background-color: blue;
+}
+
+.app__headerbg {
+	background-color: rgba(79, 75, 149, 0.9);
+}
+.headerBox {
+	display: flex;
+	gap: 3rem;
+	max-width: 120rem;
+}
+.leftBox {
+	max-width: 45rem;
+	max-height: 80rem;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.rightBoxContainer > p {
+	margin-top: 5rem;
+	font-family: "DM Sans", sans-serif;
+	font-size: 2.5rem;
+	padding: 0 3rem;
+	color: #fff;
+	font-weight: 400;
+	text-align: justify;
+}
+.rightBoxContainer > a {
+	padding: 2rem 3rem;
+	margin-top: 10rem;
+	color: #fff;
+	font-size: 2.5rem;
+	font-family: "DM Sans", sans-serif;
+	border-radius: 25px;
+	background-color: rgba(52, 47, 148, 0.8);
+}
+.rightBoxContainer > a:hover {
+	background-color: rgba(52, 47, 148, 1);
+}
+.rightBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.rightBoxContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h1 {
+	color: #fff;
+	font-size: 3.75rem;
+	padding: 0rem 3rem;
+
+	font-weight: 700;
+	font-style: italic;
+	font-family: "Tinos", sans-serif;
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+@media screen and (max-width: 1200px) {
+	.leftBox {
+		max-width: 25rem;
+		max-height: 50rem;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.75rem;
+	}
+	.rightBoxContainer > a {
+		text-align: center;
+		margin: 3rem;
+		font-size: 2rem;
+	}
+	.rightBoxContainer > p {
+		font-size: 2rem;
+		margin-top: 3rem;
+	}
+	.headerBox {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+@media screen and (max-width: 450px) {
+	.app__wrapper {
+		padding: 4rem 1rem 2rem;
+	}
+}
+
+/* ABOUT SECTION */
+
+.aboutBox {
+	max-width: 120rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin-top: 3rem;
+	justify-content: center;
+}
+.leftAbout {
+	background-color: #fff;
+	height: 100%;
+	max-width: 65rem;
+	padding: 4rem;
+	border-radius: 20px;
+}
+.rightAbout {
+	background-color: #fff;
+	height: 100%;
+	padding: 4rem;
+	max-width: 50rem;
+
+	border-radius: 20px;
+}
+
+h2 {
+	font-size: 4rem;
+	font-family: "Tinos", sans-serif;
+	font-style: italic;
+}
+.leftAbout > p,
+.rightAbout > p {
+	font-size: 1.75rem;
+	margin: 2rem 1rem;
+}
+@media screen and (max-width: 1200px) {
+	h2 {
+		font-size: 2.75rem;
+		font-family: "Tinos", sans-serif;
+		font-style: italic;
+	}
+	.leftAbout > p,
+	.rightAbout > p {
+		font-size: 1.5rem;
+		margin: 1rem 1rem;
+	}
 }

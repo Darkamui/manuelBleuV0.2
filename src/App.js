@@ -1,6 +1,5 @@
 import About from "./containers/About";
 import Header from "./containers/Header";
-
 function App() {
 	return (
 		<>

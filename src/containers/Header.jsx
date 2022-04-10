@@ -2,13 +2,19 @@ import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { AppWrap, MotionWrap } from "../wrapper";
 import manuel from "../assets/manuel.jpg";
+import uk from "../assets/united-kingdom.png";
+import fr from "../assets/france.png";
+import { useState } from "react";
 const Header = () => {
+	const [lang, setLang] = useState("fr");
 	const { t, i18n } = useTranslation();
 	const changeLanguage = (value) => {
-		value = "fr";
-		i18n.changeLanguage("fr");
+		if (lang === "en") {
+			i18n.changeLanguage("fr").then(setLang("fr"));
+		} else {
+			i18n.changeLanguage("en").then(setLang("en"));
+		}
 	};
-
 	return (
 		<header>
 			<div className="headerBox">
@@ -16,21 +22,36 @@ const Header = () => {
 					<img src={manuel} alt="" />
 				</div>
 				<div className="rightBox">
-					<h1 onClick={changeLanguage}>{t("Welcome to React")}</h1>
-					<h1>Manuel Bleu contre l'antisémitisme et la désinformation</h1>
+					{lang === "en" ? (
+						<div className="lang" onClick={changeLanguage}>
+							<img src={fr} alt="French flag" />
+							Français
+						</div>
+					) : (
+						<div className="lang" onClick={changeLanguage}>
+							<img src={uk} alt="English flag" />
+							<p>English</p>
+						</div>
+					)}
+
+					<h1>{t("h1")}</h1>
 					<div className="rightBoxContainer">
 						<p>
-							Face à la désinformation et aux attaques constantes dont le peuple
-							juif est la cible, il est impératif de parler et réagir.
+							{t("headerText")}
 							<br />
-							Pour faire valoir vos droits, encore faut-il les connaître.
+							{t("headerText1")}
 							<br />
-							Mieux savoir, mieux comprendre, pour mieux se défendre. Tel est le
-							principe de cette brochure.
+							{t("headerText2")}
 						</p>
-						<a href="https://drive.google.com/file/d/1_CY4_-iDRYaDP0F0EnJkK0e78UVI5Cq9/view?usp=sharing">
-							Cliquez pour lire/imprimer le Manuel Bleu
-						</a>
+						{lang === "en" ? (
+							<a href="https://drive.google.com/file/d/1tNVY6HE4ID1_U0SxJ4fLvXrQ1YpI92oQ/view?usp=sharing">
+								{t("headerBtn")}
+							</a>
+						) : (
+							<a href="https://drive.google.com/file/d/1_CY4_-iDRYaDP0F0EnJkK0e78UVI5Cq9/view?usp=sharing">
+								{t("headerBtn")}
+							</a>
+						)}
 					</div>
 				</div>
 			</div>

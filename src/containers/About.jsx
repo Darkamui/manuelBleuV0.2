@@ -39,7 +39,7 @@ const About = () => {
 						<br />
 						{t("institut")}
 					</p>
-					<h2>Contact</h2>
+					<h2>CONTACT</h2>
 					<p>
 						{t("contact")}
 

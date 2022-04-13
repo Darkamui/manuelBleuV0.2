@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+
 import { AppWrap, MotionWrap } from "../wrapper";
 import manuel from "../assets/manuel.jpg";
 import uk from "../assets/united-kingdom.png";
@@ -21,17 +23,32 @@ const Header = () => {
 				<div className="leftBox">
 					<img src={manuel} alt="" />
 				</div>
-				<div className="rightBox">
+				<motion.div
+					className="rightBox"
+					whileInView={{ opacity: [0, 0.5, 1] }}
+					transition={{ ease: "easeInOut", duration: 1.5 }}
+					dur
+				>
 					{lang === "en" ? (
-						<div className="lang" onClick={changeLanguage}>
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{ duration: 0.3, ease: "easeInOut" }}
+							className="lang"
+							onClick={changeLanguage}
+						>
 							<img src={fr} alt="French flag" />
 							Français
-						</div>
+						</motion.div>
 					) : (
-						<div className="lang" onClick={changeLanguage}>
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{ duration: 0.3, ease: "easeInOut" }}
+							className="lang"
+							onClick={changeLanguage}
+						>
 							<img src={uk} alt="English flag" />
 							<p>English</p>
-						</div>
+						</motion.div>
 					)}
 
 					<h1>{t("h1")}</h1>
@@ -43,17 +60,21 @@ const Header = () => {
 							<br />
 							{t("headerText2")}
 						</p>
-						{lang === "en" ? (
-							<a href="https://drive.google.com/file/d/1tNVY6HE4ID1_U0SxJ4fLvXrQ1YpI92oQ/view?usp=sharing">
+						{lang === "fr" ? (
+							<motion.a
+								whileHover={{ scale: 1.05 }}
+								transition={{ duration: 0.3, ease: "easeInOut" }}
+								href="https://drive.google.com/file/d/1tNVY6HE4ID1_U0SxJ4fLvXrQ1YpI92oQ/view?usp=sharing"
+							>
 								{t("headerBtn")}
-							</a>
+							</motion.a>
 						) : (
 							<a href="https://drive.google.com/file/d/1_CY4_-iDRYaDP0F0EnJkK0e78UVI5Cq9/view?usp=sharing">
 								{t("headerBtn")}
 							</a>
 						)}
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</header>
 	);

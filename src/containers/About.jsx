@@ -1,11 +1,10 @@
 import React from "react";
 import { AppWrap, MotionWrap } from "../wrapper";
-import manuel from "../assets/manuel.jpg";
 import sexpist from "../assets/sexpist.jpg";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
 	return (
 		<main className="aboutSection">

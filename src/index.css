@@ -14,6 +14,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	line-height: 1.6;
+	background-color: rgba(79, 75, 149, 0.6);
 }
 a {
 	text-decoration: none;
@@ -24,7 +25,7 @@ code {
 }
 .app__container {
 	width: 100%;
-	min-height: 100vh;
+	min-height: 90vh;
 
 	display: flex;
 	flex-direction: row;
@@ -69,7 +70,7 @@ code {
 }
 .app__container {
 	width: 100%;
-	min-height: 100vh;
+	min-height: 90vh;
 
 	display: flex;
 	flex-direction: row;
@@ -78,7 +79,6 @@ code {
 	background-color: grey;
 }
 .app__second-bg {
-	background-color: rgba(79, 75, 149, 0.6);
 }
 .app__navigation-dot {
 	width: 10px;
@@ -94,7 +94,8 @@ code {
 }
 
 .app__headerbg {
-	background-color: rgba(79, 75, 149, 0.9);
+	background-color: rgba(83, 78, 180, 0.9);
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 .headerBox {
 	display: flex;
@@ -106,6 +107,9 @@ code {
 	max-height: 80rem;
 	border-radius: 10px;
 	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.leftBox img {
+	z-index: 99;
 }
 
 .rightBoxContainer > p {
@@ -174,6 +178,9 @@ img {
 		max-width: 25rem;
 		max-height: 50rem;
 	}
+	.app__headerbg {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
 	h1 {
 		text-align: center;
 		font-size: 2.75rem;
@@ -213,6 +220,7 @@ img {
 	gap: 2rem;
 	margin-top: 3rem;
 	justify-content: center;
+	align-items: center;
 }
 .leftAbout {
 	background-color: #fff;
@@ -226,7 +234,6 @@ img {
 	height: 100%;
 	padding: 4rem;
 	max-width: 50rem;
-
 	border-radius: 20px;
 }
 

@@ -5,7 +5,11 @@ const MotionWrap = (Component, classNames) =>
 	function HOC() {
 		return (
 			<motion.div
-				whileInView={{ y: [30, 30, 0], opacity: [0, 0, 1] }}
+				whileInView={{
+					y: [30, 30, 0],
+					opacity: [0, 0, 1],
+					transition: { staggerChildren: 0.5 },
+				}}
 				transition={{ duration: 0.5 }}
 				className={`${classNames} app__flex`}
 			>

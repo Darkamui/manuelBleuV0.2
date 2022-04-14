@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../wrapper";
-import manuel from "../assets/manuel.jpg";
+import manuel from "../assets/bleu.webp";
 import uk from "../assets/united-kingdom.png";
 import fr from "../assets/france.png";
 import { useState } from "react";

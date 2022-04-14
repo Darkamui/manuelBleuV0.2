@@ -105,8 +105,6 @@ code {
 .leftBox {
 	max-width: 45rem;
 	max-height: 80rem;
-	border-radius: 10px;
-	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .leftBox img {
 	z-index: 99;

@@ -17,21 +17,22 @@ const resources = {
 				"Knowing better, understanding better in order to better defend justice and truth, such is the principle of this brochure.",
 			headerBtn: "Click here to read or print the Blue Manual",
 			aboutText:
-				"Having graduated from the 'École Normale Supérieure' and the Sorbonne (Paris IV), Raphael went on to pursue a military career in the intelligence services of Tsahal followed by his participation in numerous humanitarian and educational operations.",
+				"Having graduated from the 'École Normale Supérieure' and the Sorbonne (Paris IV), Raphael pursued a military career in the intelligence services of the IDF (Israel Defence Forces), and participated in humanitarian and educational operations.",
 			aboutText1:
-				"Presently, he is a well-known writer with several novels mainly published by Actes Sud (France) and translated in many languages.",
-			aboutText2: "He is also a security analyst for the i24News channel.",
+				"Currently a writer, Raphael Jerusalmy is the author of many novels published by Actes Sud (France), and translated in various languages.",
+			aboutText2:
+				"Raphael is also a security analyst for the i24News channel. ",
 			aboutText3:
-				"His last book (novel) is titled 'In Absentia' and is published by Actes Sud.",
+				"His latest book (novel) is titled 'In Absentia' and is published by Actes Sud.",
 			h2: "Help us share !",
 			shareText:
-				"Take part in the distribution of the Blue Manual among the jewish public (synagogues, youth mouvements, establishments...) as well as the non-jewish public (students,journalists...). Offer it to your family and friends.",
+				"Take part in the distribution of the Blue Manual amongst the Jewish public (synagogues, youth movements, establishments...) as well as the non-Jewish public (students, journalists...). Offer it to your family and friends.",
 			shareText1: "Order at your library or through the publisher.",
 			contact:
 				"By post : David Reinharc éditions, 19 rue de Miromesnil, 75008 – Paris.",
-			contact1: "By mail :",
+			contact1: "By mail : ",
 			institut:
-				"For establishments and institutions, it is possible to order 'personalised' copies, with your wanted logo and a preface from your director (at a reduced price). Contact the publisher.",
+				"For establishments and institutions, it is possible to order 'personalised' copies, with your logo and a preface from your director (at a reduced price). Contact the publisher.",
 		},
 	},
 	fr: {
@@ -59,7 +60,7 @@ const resources = {
 			shareText1: "A commander chez votre libraire ou à la maison d’édition.",
 			contact:
 				"Par courrier : David Reinharc éditions, 19 rue de Miromesnil, 75008 – Paris.",
-			contact1: "Par courriel :",
+			contact1: "Par courriel : ",
 			institut:
 				"Concernant les Associations ou les Institutions, il est possible de commander des exemplaires “personnalisés”, avec le logo de l’Institution et une préface de son Président (à un prix réduit). S’adresser à la maison d’édition.",
 		},
